@@ -4,4 +4,8 @@ class Song < ActiveRecord::Base
   def artist_name
     self.artist.name
   end
+
+  def index_listing
+    "#{self.artist.name}" + ' - ' + "#{self.title}" 
+  end
 end
