@@ -11,6 +11,9 @@ group :development, :test do
   gem 'pry'
   gem 'capybara'
   gem 'rspec-rails'
+  gem 'launchy'
+  
+
 end
 
 group :development do
