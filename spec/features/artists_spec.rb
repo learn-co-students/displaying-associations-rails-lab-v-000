@@ -16,6 +16,7 @@ describe "artists", type:  :feature do
 
   it "lists all of the artist's songs" do
     visit artist_path(@artist)
+    save_and_open_page
     within("ul") do
       expect(page).to have_content("The Grid")
       expect(page).to have_content("Voyager")
