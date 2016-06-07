@@ -1,0 +1,6 @@
+
+<h1>All Songs:</h1>
+
+  <% @songs.each do |a| %>
+    <li><%= link_to a.index_presentation, song_path(a) %></li>
+  <% end %>
