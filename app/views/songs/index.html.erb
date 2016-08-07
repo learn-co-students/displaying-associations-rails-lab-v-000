@@ -1,0 +1,8 @@
+<h1>Here's some songs!</h1>
+
+<% @songs.each do |song| %>
+  <% @fluff = song.artist.name  + " - " + song.title %> 
+    <%= link_to @fluff, song_path(song) %><br>
+  <%= link_to song.artist.name, artist_path(song.artist) %>
+<% end %>
+
