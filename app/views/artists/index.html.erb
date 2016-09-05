@@ -1,3 +1,3 @@
 <% Artist.all.each do |artist| %>
-  <div><%= link_to artist.name, artist_path(artist) %></div>
+  <div><%= link_to artist.name, artist_path(artist) %> <%= artist.songs.count %> song(s).</div>
 <% end %>
