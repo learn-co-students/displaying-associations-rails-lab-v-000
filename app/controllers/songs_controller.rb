@@ -1,11 +1,17 @@
+require 'pry'
 class SongsController < ApplicationController
+  
   def index
+    @songs = Song.all
   end
 
   def show
+    @song = Song.find(params[:id])
+    @artist = @song.artist
   end
 
   def new
+    @song = Song.new(song_params)
   end
 
   def create

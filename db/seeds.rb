@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+artists = Artist.create([{name: "Pasquali"}])
+songs = Song.create([{title: "Blue Birds"}, {title: "Oye Como Va"}])
+songs.each do |song|
+  song.artist = Artist.find_by(name: "Pasquali")
+end
