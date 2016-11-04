@@ -1,0 +1,7 @@
+<h1><%= current_artist %></h1>
+<p>Number of song(s): <%= current_artist.song_count %></p>
+<ul>
+  <% current_artist.songs.each do |song| %>
+  <li><%= link_to song.title, song_path(song) %></li>
+  <% end %>
+</ul>

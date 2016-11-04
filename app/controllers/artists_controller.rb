@@ -1,5 +1,8 @@
 class ArtistsController < ApplicationController
+  helper_method :current_artist
+
   def index
+    @artists = Artist.all
   end
 
   def show
@@ -46,5 +49,9 @@ class ArtistsController < ApplicationController
 
   def artist_params
     params.require(:artist).permit(:name)
+  end
+
+  def current_artist
+    @artist ||= Artist.find(params[:id])
   end
 end
