@@ -2,7 +2,7 @@
 
 <h3>
   <% @songs.each do |song| %>
-    <%= link_to "#{song.artist_name} - #{song.title}", song_path(song) %><br>
+    <%= link_to "#{song.artist_name} - #{song.title}", song %><br>
   <% end %>
 
 </h3>
