@@ -1,0 +1,16 @@
+
+<% @artists.each do |artist| %>
+<h1><%= artist.name %></h1>
+
+<%=pluralize(artist.songs.count, 'song')%>
+  <ul>
+  <% artist.songs.each do |song| %>
+
+
+
+    <li><%=link_to(song.title, song) %></li>
+
+  <%end%>
+  </ul>
+
+<%end%>

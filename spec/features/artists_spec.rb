@@ -1,4 +1,4 @@
-require 'rails_helper'
+  require 'rails_helper'
 
 describe "artists", type:  :feature do
   before do
@@ -17,8 +17,8 @@ describe "artists", type:  :feature do
   it "lists all of the artist's songs" do
     visit artist_path(@artist)
     within("ul") do
-      expect(page).to have_content("The Grid")
-      expect(page).to have_content("Voyager")
+      expect(page).to have_link("The Grid")
+      expect(page).to have_link("Voyager")
     end
   end
 
