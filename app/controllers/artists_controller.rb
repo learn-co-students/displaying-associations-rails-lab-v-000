@@ -1,8 +1,13 @@
+require 'pry'
 class ArtistsController < ApplicationController
   def index
+    @artists = Artist.all
   end
 
   def show
+    # binding.pry
+    @artist = Artist.find(params[:id])
+    # binding.pry
   end
 
   def new
@@ -34,6 +39,7 @@ class ArtistsController < ApplicationController
       render :edit
     end
   end
+
 
   def destroy
     @artist = Artist.find(params[:id])
