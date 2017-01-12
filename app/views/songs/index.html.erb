@@ -1,0 +1,5 @@
+<ul>
+  <% Song.all.each do |song| %>
+    <li><%= link_to song.list_format, song_path(song) %></li>
+  <% end %>
+</ul>
