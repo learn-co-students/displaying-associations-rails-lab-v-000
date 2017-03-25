@@ -1,0 +1,7 @@
+<h1>The Artists</h1>
+
+<ul>
+  <% @artists.each do |artist| %>
+    <li><%= link_to artist.name, artist %><br><%= artist.songs.size%> song</li>
+  <% end %>
+</ul>
