@@ -8,4 +8,6 @@ class Artist < ActiveRecord::Base
     self.songs.count
   end  
 
+
+
 end
