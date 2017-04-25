@@ -3,6 +3,6 @@
 <ul>
   <% @artists.each do |artist| %>
     <li><%= link_to artist.name, artist_path(artist) %></li>
-    <h3>Song count: <%= artist.songs.any? ? artist.songs.count : 0 %> songs</h3>
+    <h3>Song count: <%= artist.song_count %> songs</h3>
   <% end %>
 </ul>
