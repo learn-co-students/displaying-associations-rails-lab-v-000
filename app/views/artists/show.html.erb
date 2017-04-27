@@ -1,0 +1,7 @@
+<h2>Welcome to the <%=@artist.name%> page.</h2>
+<h3>Songs list:</h3>
+<ul>
+<% @artist.songs.each do |s| %>
+  <li><%= link_to s.title, song_path(s) %></li>
+<% end %>
+</ul>
