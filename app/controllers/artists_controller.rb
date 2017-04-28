@@ -1,9 +1,13 @@
 class ArtistsController < ApplicationController
   def index
+    @artists = Artist.all
   end
 
   def show
+    #binding.pry
+    @artist = Artist.find(params[:id])
   end
+
 
   def new
     @artist = Artist.new
@@ -45,6 +49,6 @@ class ArtistsController < ApplicationController
   private
 
   def artist_params
-    params.require(:artist).permit(:name)
+    params.require(:artist).permit(:name, :id)
   end
 end
