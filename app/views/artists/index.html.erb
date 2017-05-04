@@ -1,0 +1,8 @@
+<h1><%= pluralize(@artists.size, "Artist") %></h1>
+
+<ul>
+  <% @artists.each do |artist| %>
+    <%= link_to(artist.name, artist_path(artist)) %>
+    <li><%= pluralize(artist.songs.size, "song") %></li>
+  <% end %>
+</ul>
