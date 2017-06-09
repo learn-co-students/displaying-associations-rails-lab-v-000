@@ -7,3 +7,5 @@ class CreateSongs < ActiveRecord::Migration
     end
   end
 end
+
+#rails g migration AddArtistIdToSongs artist_id:integer
