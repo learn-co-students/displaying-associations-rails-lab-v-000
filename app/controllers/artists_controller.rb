@@ -45,6 +45,7 @@ class ArtistsController < ApplicationController
   end
 
   def song_count
+    self.songs.count
   end
 
   private
