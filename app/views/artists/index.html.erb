@@ -1,0 +1,11 @@
+<p><%= link_to 'songs list', songs_path %></p>
+<h1>Artists</h1>
+<%= button_to "Create Artist", new_artist_path, method: :get %><br>
+<ul>
+  <% @artists.sort_by{|artist| artist.name}.each do |artist| %>
+    <li><%= link_to artist.name, artist_path(artist) %><%= " - " + pluralize(artist.songs.count, "song") %></li>
+      <% artist.songs.sort_by{|song| song.title}.each do |song| %>
+        <span><%= link_to song.title, song_path(song) %></span>
+      <% end %>
+  <% end %>
+</ul>

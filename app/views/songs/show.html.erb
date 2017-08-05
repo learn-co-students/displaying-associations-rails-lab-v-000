@@ -1,0 +1,5 @@
+<p><%= link_to '<--songs', songs_path %></p>
+<dl>
+  <dt><%= @song.title %></dt>
+    <dd><%= link_to @song.artist.name, artist_path(@song.artist) %></dd>
+</dl>
