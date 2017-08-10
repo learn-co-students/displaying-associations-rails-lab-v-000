@@ -1,0 +1,3 @@
+<% Artist.all.each do |a| %>
+  <li><%= a.name %>" - "<%= link_to a.name, artist_path(a) %></li>
+<% end %>
