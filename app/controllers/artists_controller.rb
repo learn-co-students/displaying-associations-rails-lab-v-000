@@ -43,11 +43,7 @@ class ArtistsController < ApplicationController
     flash[:notice] = "Artist deleted."
     redirect_to artists_path
   end
-
-  def song_count
-    self.songs.count
-  end
-
+  
   private
 
   def artist_params
