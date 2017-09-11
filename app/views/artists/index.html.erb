@@ -1,8 +1,8 @@
 <h1>Artist Index</h1>
 <% @artists.each do |artist| %>
   <%= artist.name %>
-  <% artist.songs.each do |song| %>  
-    <p>Number of songs: <%= artist.song_count %></p>
+  <p><%= pluralize(artist.song_count, 'song') %></p>
+  <% artist.songs.each do |song| %>
     <ul>
       <li><%= song.title %></li>
     </ul>
