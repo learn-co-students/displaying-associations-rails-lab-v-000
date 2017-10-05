@@ -5,6 +5,7 @@ RSpec.describe Artist, type: :model do
     Artist.destroy_all
     Song.destroy_all
     @artist = Artist.create!(name: "Daft Punk")
+    binding.pry
     @grid = @artist.songs.create!(title: "The Grid")
     @voyager = @artist.songs.create!(title: "Voyager")
   end
