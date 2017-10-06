@@ -13,3 +13,8 @@ it will automatically use the ID attribute, so we'll use this implementation cod
 <% @posts.each do |post| %>
   <div><%= link_to post.title, post_path(post) %></div>
 <% end %> -->
+<!-- If you open up the Rails console again, you can call the route helpers.
+If you have a Post with an id of 3, you can run app.post_path(3) and
+see what the resulting output is. Running route helpers in the rails
+console is a great way of testing out routes to see what their
+exact output will be. -->
