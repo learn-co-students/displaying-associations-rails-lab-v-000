@@ -1,5 +1,25 @@
-<ul>
+<!-- <ul>
 <% @songs.each do |song| %>
  <li><%= link_to song.artist_title, song_path(song) %></li>
  <% end %>
+</ul> -->
+<h1>Songs</h1>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      <a href="<%= song_path(song) %>">
+        <%= song.artist_name %>
+        -
+        <%= song.title %>
+      </a>
+    </li>
+  <% end %>
 </ul>
+<!-- #https://github.com/learn-co-curriculum/rails-url-helpers-readme -->
+<!-- This is much better, but to be thorough, let's make one last refactor:
+Rails is smart enough to know that if you pass in the post object as an argument,
+it will automatically use the ID attribute, so we'll use this implementation code:
+<% @posts.each do |post| %>
+  <div><%= link_to post.title, post_path(post) %></div>
+<% end %> -->
