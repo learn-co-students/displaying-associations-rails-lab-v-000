@@ -1,0 +1,5 @@
+<% @songs.each do |song| %>
+<ul>
+  <%= link_to song.info, song_path(song) %>
+</ul>
+<% end %>
