@@ -1,0 +1,16 @@
+
+<table>
+	<thead>
+		<th>Artist</th>
+		<th>Songs</th>
+	</thead>
+	<tbody>
+		<% @artists.each do |artist| %>
+				<tr>
+					<td><%= link_to artist.name, artist_path(artist) %></td>
+					<td><<%= pluralize(artist.song_count, 'song') %></td>
+				</tr>	
+		<% end %>
+	</tbody>
+
+</table>
