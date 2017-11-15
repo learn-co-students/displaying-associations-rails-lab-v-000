@@ -1,0 +1,4 @@
+<ul><% @artist.songs.each do |s| %>
+      <li><a href="/songs/<%= s.id %>"><%= s.title %></a></li><br>
+<% end %>
+</ul>
