@@ -1,8 +1,10 @@
 class SongsController < ApplicationController
-  def index
+  def index # implicitly renders views/songs/index.html.erb to display all songs
+    @songs = Song.all
   end
 
-  def show
+  def show # implicitly renders views/songs/show.html.erb to show a single song
+    @song = Song.find(params[:id])
   end
 
   def new
@@ -47,4 +49,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title)
   end
 end
-

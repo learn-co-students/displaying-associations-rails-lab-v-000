@@ -1,8 +1,10 @@
 class ArtistsController < ApplicationController
-  def index
+  def index # implicitly renders views/artists/index.html.erb to display all artists
+    @artists = Artist.all
   end
 
-  def show
+  def show # implicitly renders views/artists/show.html.erb to show a single artist
+    @artist = Artist.find(params[:id])
   end
 
   def new
