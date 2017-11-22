@@ -1,0 +1,24 @@
+<h1>Artists index page</h1>
+
+<ul>
+  <% @artists.each do |a| %>
+    <h3><%= link_to a.name, artist_path(a) %></h3>
+      <li> ---- <%= pluralize(a.song_count, 'song') %></li>
+  <% end %>
+</ul>
+
+<% if false %>
+/////// Below is a loop that puts the artist with a link to artist page and puts thier songs with links to each song. i like this more /////
+
+
+<ul>
+  <% @artists.each do |a| %>
+    <h3><%= link_to a.name, artist_path(a) %></h3>
+    <% a.songs.each do |s| %>
+      <li><%= link_to  s.title, song_path(s) %></li>
+    <li><% end %></li>
+  <% end %>
+</ul>
+
+
+<% end %>
