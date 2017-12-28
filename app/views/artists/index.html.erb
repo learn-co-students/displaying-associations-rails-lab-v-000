@@ -1,0 +1,6 @@
+<h1>Artists</h1>
+<ul>
+<% Artist.all do |artist| %>
+  <li><%= artist.name %></li>
+<%end%>
+</ul>
