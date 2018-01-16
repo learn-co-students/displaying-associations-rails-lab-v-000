@@ -1,0 +1,25 @@
+
+<h1>Artists</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Song_count</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artists.each do |artist| %>
+      <tr>
+        <td><%= artist.name %></td>
+        <td><%=pluralize(artist.songs.count, 'song')%></td>
+        <td>
+          <%= link_to 'View', artist %> |
+          <%= link_to 'Edit', edit_artist_path(artist) %> |
+          <%= link_to "Delete", artist, method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
