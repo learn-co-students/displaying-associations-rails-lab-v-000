@@ -3,9 +3,11 @@
 <%= form_for @song  do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
+
+  <%= f.label :artist_id, 'Song Artist:' %><br>
+  <%= f.collection_radio_buttons :artist_id, @artists, :id, :name %>
+
   <br />
 
   <%= f.submit %>
 <% end %>
-
-
