@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+dm = Artist.create(name: "Depeche Mode")
+dm.save
+
+halo = dm.songs.build(title: "Halo")
+halo.save
+
+celebration = dm.songs.build(title: "Black Celebration")
+celebration.save
