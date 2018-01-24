@@ -1,0 +1,5 @@
+<!-- SHOWS ALL SONGS -->
+
+<% @songs.all.each do |song| %>
+<a href="/songs/<%= song.id %>"><%= song.artist_name %> - <%= song.title %></a>
+<% end %>
