@@ -7,3 +7,5 @@ class CreateSongs < ActiveRecord::Migration
     end
   end
 end
+
+#blank
