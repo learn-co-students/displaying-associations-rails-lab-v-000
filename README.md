@@ -1,14 +1,14 @@
 # Displaying Associations Rails
 
-In the previous unit, we used validations and forms to create a management dashboard for songs and artists. Now we're ready to start connecting those models and using their relationships to display more interesting data.
+In the previous unit, we used validations and forms to create a management dashboard for songs and artists. Now we're ready to start connecting those models and using their relationships to display more interesting data. X
 
-- In the controllers, this lab will require you to write `show` and `index` actions for both `Song` and `Artist`.
+- In the controllers, this lab will require you to write `show` and `index` actions for both `Song` and `Artist`. X
 
-- You'll need to add a foreign key by writing your own migration.
+- You'll need to add a foreign key by writing your own migration. X
 
-- You'll need to set up the association in the model classes.
+- You'll need to set up the association in the model classes. X
 
-- You'll need to format and link to the songs and artists according to the
+- You'll need to format and link to the songs and artists according to the X
   specs.
 
 Additionally, you'll find that the specs require two special methods, `Artist#song_count` and `Song#artist_name`. These methods are meant to protect the views from complexity that belongs in the model.
