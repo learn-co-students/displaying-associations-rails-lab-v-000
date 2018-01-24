@@ -1,8 +1,14 @@
+require 'pry'
 class ArtistsController < ApplicationController
+ 
   def index
+    @artists = Artist.all
   end
 
   def show
+    @artist = Artist.find(params[:id])
+    @songs = @artist.songs
+    @song_count = @artist.song_count
   end
 
   def new
@@ -11,7 +17,6 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.new(artist_params)
-
     if @artist.save
       redirect_to @artist
     else
@@ -25,9 +30,7 @@ class ArtistsController < ApplicationController
 
   def update
     @artist = Artist.find(params[:id])
-
     @artist.update(artist_params)
-
     if @artist.save
       redirect_to @artist
     else
@@ -43,7 +46,6 @@ class ArtistsController < ApplicationController
   end
 
   private
-
   def artist_params
     params.require(:artist).permit(:name)
   end
