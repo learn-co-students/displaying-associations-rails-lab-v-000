@@ -1,0 +1,9 @@
+<!-- Lists the artists by using link_to helper method  -->
+
+<% @artists.each do |artist| %>
+  <li><%= link_to artist.name, artist_path(artist)%></li>
+  <%= artist.song_count %>
+  <% artist.songs.each do |song| %>  <%= "song".pluralize(artist.song_count) %>
+    <% link_to song.title, song_path(song) %>
+    <% end %>
+  <% end %>
