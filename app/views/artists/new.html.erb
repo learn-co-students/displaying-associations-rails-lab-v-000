@@ -4,6 +4,6 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br />
-
+  <%= f.collection_check_boxes :song_ids, Song.all, :id, :title%>
   <%= f.submit %>
 <% end %>
