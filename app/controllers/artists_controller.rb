@@ -1,8 +1,13 @@
 class ArtistsController < ApplicationController
   def index
+    @artists = Artist.all
   end
 
   def show
+    @artist = Artist.find(params[:id])
+    # creating artist_songs variable in the controller to reduce amount
+    # of logic in the views
+    @artist_songs = @artist.songs
   end
 
   def new
