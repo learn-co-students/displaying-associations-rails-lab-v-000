@@ -20,7 +20,7 @@ describe "artists", type:  :feature do
       expect(page).to have_content("The Grid")
       expect(page).to have_content("Voyager")
     end
-  end
+  end         
 
   it "lists the artists" do
     visit artists_path
