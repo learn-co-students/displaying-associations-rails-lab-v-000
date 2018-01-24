@@ -1,0 +1,13 @@
+<h1><%= @artist.name.capitalize %></h1>
+
+<h3><%= @artist.name.capitalize %>'s songs: </h3>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li><%= link_to song.title, song_path(song) %></li>
+  <% end  %>
+</ul>
+
+
+
+<%= link_to "View all artists", artists_path %>

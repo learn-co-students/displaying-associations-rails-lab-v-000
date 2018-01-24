@@ -1,0 +1,9 @@
+<h1><%= @song.title.capitalize %></h1>
+
+<h3>Artist:</h3>
+
+<%= link_to @song.artist_name, artist_path(@song.artist) %>
+
+<br></br> 
+
+<%= link_to "View all songs", songs_path %>
