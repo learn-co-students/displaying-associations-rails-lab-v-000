@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Artists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artists.each do |artist| %>
+      <tr>
+        <td><%= link_to artist.name, artist_path(artist) %></td>
+        <td><%= artist.song_count %> <%="song".pluralize(artist.song_count)%>)</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
