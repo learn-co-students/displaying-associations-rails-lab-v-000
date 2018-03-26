@@ -1,0 +1,4 @@
+<h1>Artists</h1>
+<%Artist.all.each do |artist_obj|%>
+<p><%=link_to artist_obj.name, artist_path(artist_obj)%> has <%="#{artist_obj.song_count} #{'song'.pluralize(artist_obj.song_count)}"%></p>
+<%end%>
