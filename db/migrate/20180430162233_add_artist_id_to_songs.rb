@@ -1,5 +1,7 @@
 class AddArtistIdToSongs < ActiveRecord::Migration
   def change
-    add_column :songs, :artist_id, :string
+    change_table :songs do |t|
+      t.integer :artist_id
+    end
   end
 end
