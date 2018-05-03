@@ -1,13 +1,14 @@
 class SongsController < ApplicationController
   def index
-    @songs = Songs.all
+    @songs = Song.all
   end
 
   def show
-    @song = Song.new(song_params)
+      @song = Song.find(params[:id])
   end
 
   def new
+    @song = Song.new
   end
 
   def create
