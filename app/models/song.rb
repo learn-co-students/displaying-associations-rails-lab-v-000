@@ -2,6 +2,6 @@ class Song < ActiveRecord::Base
   belongs_to :artist
 
   def artist_name
-    self.artist.nil? ? self.artist.name : 'None'
+    self.artist.nil? ? 'None' : self.artist.name
   end
 end
