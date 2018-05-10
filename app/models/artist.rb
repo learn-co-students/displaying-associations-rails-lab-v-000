@@ -1,5 +1,5 @@
 class Artist < ActiveRecord::Base
-  def artist_name
-    self.name.nil? ? '' : self.name
+  def song_count
+    self.songs.length
   end
 end
