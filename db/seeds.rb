@@ -9,3 +9,5 @@ Artist.create(name: "Kendrick Lamar")
 love = Song.create(title: "LOVE.")
 love.artist_id = 1
 love.save
+
+# i made these to test my code. I didn't link the song and the artist.
