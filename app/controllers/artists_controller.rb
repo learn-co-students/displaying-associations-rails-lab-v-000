@@ -16,7 +16,7 @@ class ArtistsController < ApplicationController
 
     if @artist.save
       @artist.save
-      redirect_to @artist
+      redirect_to artist_path(@artist)
     else
       render :new
     end
@@ -32,7 +32,7 @@ class ArtistsController < ApplicationController
     @artist.update(artist_params)
 
     if @artist.save
-      redirect_to @artist
+      redirect_to artist_path(@artist)
     else
       render :edit
     end
