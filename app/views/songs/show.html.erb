@@ -1,0 +1,7 @@
+<h1><%= @song.title %></h1>
+
+<%= link_to @song.artist_name, @song.artist %>
+#knows to go to artist for that song instance ... look for the id involved 
+in the "path" argument ... "artist_path" would be superfluous because 
+as long as there's an object that has an id associated with it in the parameter,
+Ruby Magic will know which route to go to
