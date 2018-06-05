@@ -4,6 +4,6 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br />
-
+<h1>Song: <%= link_to @artist.song.title, artist-path(@artist.song) %></h1>
   <%= f.submit %>
 <% end %>
