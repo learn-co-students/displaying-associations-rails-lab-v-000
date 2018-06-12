@@ -1,5 +1,5 @@
 # Displaying Associations Rails
-
+TEST
 In the previous unit, we used validations and forms to create a management dashboard for songs and artists. Now we're ready to start connecting those models and using their relationships to display more interesting data.
 
 - In the controllers, this lab will require you to write `show` and `index` actions for both `Song` and `Artist`.
