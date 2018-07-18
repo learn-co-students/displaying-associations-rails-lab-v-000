@@ -1,0 +1,27 @@
+<h1> All Artists </h1>
+
+<% @artists.each do |artist| %>
+  <% if @artists.empty? %>
+    <%= link_to "Create Artist", new_artist_path(artist) %>
+  <% else %>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <%= link_to artist.name, artist_path(artist) %>
+            (<%= artist.song_count %> <%= "song".pluralize(artist.song_count) %>)
+          </td>
+          <td><%= link_to "Show", artist %></td>
+          <td><%= link_to "Edit", edit_artist_path(artist) %></td>
+        </tr>
+      </tbody>
+    </table>
+  <% end %>
+<% end %>
