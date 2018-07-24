@@ -5,4 +5,7 @@ class Song < ActiveRecord::Base
     self.artist.name
   end
 
+  def get_summary
+    artist_name + " - " + self.title
+  end
 end
