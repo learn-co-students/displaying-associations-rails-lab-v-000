@@ -1,0 +1,29 @@
+<h1>Song List</h1>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li><%= link_to "#{song.artist_name} - #{song.title}", song_path(song) %></li>
+  <% end %>
+</ul>
+
+<div class='table'>
+  <table>
+    <thead>
+      <tr>
+        <th>Song Title</th>
+        <th>Artist Name</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <% @songs.each do |song| %>
+        <tr>
+          <td><%= song.title %></td>
+          <td><%= song.artist_name %></td>
+          <td><%= link_to 'View Song', song_path(song)%></td>
+          <td><%= link_to 'View Artist', artist_path(song.artist) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
