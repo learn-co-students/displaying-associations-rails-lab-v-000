@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
   def index
-    @song = Song.all
+    @songs = Song.all
 
   end
 
@@ -10,7 +10,7 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Artist.new
+    @song = Song.new
     @song.save
   end
 
