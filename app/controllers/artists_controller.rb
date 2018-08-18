@@ -3,6 +3,12 @@ class ArtistsController < ApplicationController
     @artists = Artist.all
   end
 
+
+  # When you get an error in rails.. If it in plural with an "S" at the end, it focus on the index
+  # if it singular,  It directs to the show page
+
+
+
   def show
     @artist = Artist.find(params[:id])
   end
