@@ -1,0 +1,11 @@
+<%# 1. Header is artist name %>
+<%# 2. Display artist's songs as unordered list %>
+<%# 3. Artist's songs lead to each song's link %>
+
+<h1> <%= @artist.name %> </h1>
+
+<ul>
+    <% @songs.each do |song| %>
+        <li> <%= link_to song.title, song_path(song) %> </li>
+    <% end %>
+</ul>

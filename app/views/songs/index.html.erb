@@ -1,0 +1,5 @@
+<%# Lists songs in 'Artist Name - Song Title' format %>
+
+<% @songs.each do |song| %>
+    <%= link_to "#{song.artist.name} - #{song.title}", song_path(song) %>
+<% end %>

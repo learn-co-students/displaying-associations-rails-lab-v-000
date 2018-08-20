@@ -1,0 +1,7 @@
+<%# 1. Display each artist's name %>
+<%# 2. Display song count for each artist %>
+
+<%= @artists.each do |artist| %>
+    <h1> <%= artist.name %> </h1>
+    <h2> <%= pluralize(artist.songs.count, 'song') %> </h2>
+<% end %>
