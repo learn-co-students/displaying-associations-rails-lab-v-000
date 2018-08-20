@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+@adele = Artist.create(:name => "Adele")
+@hello = @adele.songs.build(:title => "Hello")
+@hello.save
+@fire = @adele.songs.build(:title => "Set Fire to the Rain")
+@fire.save
+
+@ariana = Artist.create(:name => "Ariana Grande")
+@problem = @ariana.songs.build(:title => "Problem")
+@problem.save
