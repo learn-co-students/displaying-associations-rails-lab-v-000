@@ -1,1 +1,6 @@
-<% # links to artists songs, and lists them all %>
+
+<ul>
+  <% @artist.songs.each do |song| %>
+    <li><%= link_to song.title, song_path(song) %></li>
+  <% end %>
+</ul>
