@@ -1,0 +1,7 @@
+<h1>Artist Index Page</h1>
+
+<ul>
+  <%Artist.all.each do |a|%>
+    <li><%=link_to a.name, artist_path(a)%> - <%=pluralize(a.song_count, 'song')%></li>
+  <%end%>
+</ul>
