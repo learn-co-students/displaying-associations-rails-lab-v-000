@@ -3,9 +3,11 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    binding.pry
   end
 
   def new
+    binding.pry
     @artist = Artist.new
   end
 
