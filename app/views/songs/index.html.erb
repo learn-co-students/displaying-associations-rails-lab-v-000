@@ -1,0 +1,18 @@
+<h1>Song Index</h1>
+
+<div>
+  <% @songs.each do |song| %>
+
+  <p><%= song.artist_name if song.artist %> - <%= link_to song.title, song_path(song) %></p>
+
+  <%= link_to(song) do %>
+  <strong><%= song.artist_name if song.artist %> - <%= song.title %></strong>
+  <% end %>
+
+
+  <% end %>
+
+</div>
+
+
+<!-- expect(page).to have_link("Daft Punk - The Grid", href: song_path(@song)) -->
