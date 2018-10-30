@@ -1,0 +1,25 @@
+<h1>All Artists</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Artist</th>
+            <th>Song Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @artists.each do |artist| %>
+            <tr>        
+                <td><%= artist.name %></td>
+                <td><%= artist.song_count %></td>
+            </tr>            
+        <%end%>
+    </tbody>
+</table>
+
+<!--FOR PASSING FLATIRON SPECS -->
+    <ul>
+        <% @artists.each do |artist| %>
+            <li>Name: <%= artist.name %>; Song Count: <%= artist.song_count %> songs</li>
+        <%end%>
+    </ul>
