@@ -1,0 +1,8 @@
+require 'pry'
+<% @artist.each do |a|%>
+<ul>
+  <li><%= a.name %> has
+  <%= pluralize(a.song_count, 'song')%></li>
+
+  <%end %>
+  </ul>
