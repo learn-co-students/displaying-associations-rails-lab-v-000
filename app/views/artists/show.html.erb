@@ -1,0 +1,10 @@
+require 'pry'
+<h1><%= @artist.name %></h1>
+
+
+  <h3><%= pluralize(@artist.songs.count, 'Song') %></h3>
+<ul>
+<% @artist.songs.each do |a| %>
+Category: <%= link_to a.title, song_path(a) if a %>
+<%end%>
+</ul>
