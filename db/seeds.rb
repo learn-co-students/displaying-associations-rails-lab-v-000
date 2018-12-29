@@ -4,4 +4,13 @@
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#   Mayor.create(name: 'Emanuel', city: cities.firsa
+
+a = Artist.create(name: "Avett Brothers")
+s1 = Song.create(title: "January Wedding")
+s2 = Song.create(title: "Shame")
+s3 = Song.create(title: "Love")
+
+a.songs << s1
+a.songs << s2
+a.songs << s3
