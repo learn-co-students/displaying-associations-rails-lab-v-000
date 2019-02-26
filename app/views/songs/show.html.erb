@@ -1,0 +1,8 @@
+<h1> <%=@song.title%> </h1>
+
+  <ul>
+    <li>
+    Artist: <a href='<%=artist_path(@song.artist)%>'>
+      <%=@song.artist.name%></a>
+    </li>
+  </ul>
