@@ -1,0 +1,7 @@
+<h1><%= @song.title %></h1>
+
+<p>
+  Created by <%= link_to @song.artist_name, artist_path(@song.artist) %>
+</p>
+
+<%= link_to "Song Index", songs_path %>
