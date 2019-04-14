@@ -1,0 +1,6 @@
+<h1>Here's yer song!</h1>
+
+  <% @fluff = @song.artist_name  + " - " + @song.title %> 
+    <%= link_to @fluff, song_path(@song) %><br>
+  <%= link_to @song.artist_name, artist_path(@song.artist) %>
+
