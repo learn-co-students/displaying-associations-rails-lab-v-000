@@ -6,6 +6,7 @@ class SongsController < ApplicationController
   end
 
   def show
+    @artist = Artist.find_by(id: @song.artist_id)
   end
 
   def new
