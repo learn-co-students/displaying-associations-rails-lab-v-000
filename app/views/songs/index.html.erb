@@ -1,0 +1,11 @@
+<h1>Our Collection of Songs</h1>
+
+<% if @songs.any? %>
+    <%= pluralize(@songs.count, 'song') %>
+    <ul>
+        <% @songs.each do |s| %>
+            <li><%= link_to "#{s.artist.name}" + " - " + "#{s.title}", song_path(s) %></li>
+        <% end %>
+    </ul>
+
+<% end %>
