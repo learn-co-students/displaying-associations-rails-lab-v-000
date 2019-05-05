@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Song.destroy_all
+Artist.destroy_all
+
+Song.create(:title => "Test Baby", :artist_id => 1)
+Artist.create(:name => "The Momma's and the Papa's")
