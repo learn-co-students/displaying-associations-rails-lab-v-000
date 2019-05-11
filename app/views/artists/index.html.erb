@@ -1,0 +1,12 @@
+<table>
+	<tr>
+		<th>Artist Name</th>
+		<th>Song Count</th>
+	</tr>
+	<% @artists.each do |a| %>
+		<tr>
+			<td>><%= a.name %></td>
+			<td><%= a.song_count %> songs</td>
+		</tr>
+	<% end %>
+</table>
