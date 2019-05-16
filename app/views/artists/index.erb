@@ -1,0 +1,13 @@
+<h1>Artists</h1>
+<table>
+    <tr>
+        <th>Artist Name</th>
+        <th>Song Count</th>
+    </tr>
+    <% @artists.each do |artist| %>
+        <tr>
+            <td><%= link_to artist.name, artist_path(artist) %></td>
+            <td><%= artist.song_count %> <%= "song".pluralize(artist.song_count) %></td>
+        </tr>
+    <%end%>
+</table>
