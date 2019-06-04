@@ -1,0 +1,8 @@
+<h3>An index page for all the Artists in the app</h3>
+
+<h2>Artists:</h2>
+
+<% @artists.each do |a| %>
+  <p>Name: <%= a.name %></p>
+  <p>Songs: <%= a.song_count %> songs</p>
+<% end %>
