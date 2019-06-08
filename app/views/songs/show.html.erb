@@ -1,0 +1,5 @@
+<%if @song.artist != nil %>
+  <%=link_to @song.artist_name, artist_path(@song)  %> - <%= @song.title %>
+ <%else%>
+  <%= @song.title %>
+<%end%>
