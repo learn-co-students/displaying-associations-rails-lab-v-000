@@ -1,8 +1,10 @@
 class ArtistsController < ApplicationController
   def index
+    @artists = Artist.all
   end
 
   def show
+    @artist = Artist.find_by(id: params[:id])
   end
 
   def new
@@ -26,9 +28,7 @@ class ArtistsController < ApplicationController
   def update
     @artist = Artist.find(params[:id])
 
-    @artist.update(artist_params)
-
-    if @artist.save
+    if @artist.update(artist_params)
       redirect_to @artist
     else
       render :edit
