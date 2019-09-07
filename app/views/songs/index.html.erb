@@ -1,0 +1,5 @@
+<% @songs.each do |song| %>
+<ul>
+<li><%= song.artist.name.capitalize %> - <%= song.title.capitalize %> </li>
+</ul>
+<% end %>
