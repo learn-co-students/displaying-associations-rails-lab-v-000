@@ -1,1 +1,4 @@
-show 2 
+
+Welcome to the <%="#{@song.title.capitalize}"%>'s Page.
+The song's artist is:
+<%= link_to "#{@song.artist.name.capitalize}", artist_path(@song.artist)%></li>

@@ -1,5 +1,5 @@
 <% @songs.each do |song| %>
 <ul>
-<li><%= song.artist.name.capitalize %> - <%= song.title.capitalize %> </li>
+<li> <%= link_to "#{song.artist.name.capitalize} - #{song.title.capitalize}", song_path(song)%></li>
 </ul>
 <% end %>
