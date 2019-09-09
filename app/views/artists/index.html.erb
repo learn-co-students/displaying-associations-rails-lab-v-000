@@ -1,5 +1,5 @@
 <%@artists.each do |artist|%>
-  <h2><%=artist.name%></h2>
+  <h2><%=artist.name%> has <%=artist.songs.count%> songs </h2>
     <ul>
       <%artist.songs.each do |song|%>
         <li>
