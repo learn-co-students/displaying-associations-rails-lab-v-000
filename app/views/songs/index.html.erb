@@ -1,0 +1,17 @@
+<h1>Songs</h1>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      <%= link_to( "#{song.artist_name} - #{song.title}", song_path(song) ) %>
+
+      <p>
+        <%= form_tag song_path(song), method: "delete" do %>
+          <%= submit_tag "Delete #{song.title}" %>
+        <% end %>
+      </p>
+    </li>
+  <% end %>
+</ul>
+
+<!-- Ask about this: Does the interpolated string above belong in the view, or in the Song model? -->
