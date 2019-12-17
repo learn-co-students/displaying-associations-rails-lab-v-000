@@ -46,6 +46,9 @@ class ArtistsController < ApplicationController
 
   def song_count
     @artist.song.count
+  end
+
+
   private
 
   def artist_params
