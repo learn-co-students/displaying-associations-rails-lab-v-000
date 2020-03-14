@@ -13,10 +13,10 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = Artist.new(artist_params)
-
+    @artist = Artist.new(artist_params) #instatiate a new artist
+  
     if @artist.save
-      redirect_to @artist
+      redirect_to artist_path(@artist)
     else
       render :new
     end
@@ -49,5 +49,9 @@ class ArtistsController < ApplicationController
 
   def artist_params
     params.require(:artist).permit(:name)
+  end
+
+  def song_params
+    params.require(:song).permit(:title)
   end
 end
