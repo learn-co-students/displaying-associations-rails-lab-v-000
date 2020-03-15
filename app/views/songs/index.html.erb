@@ -1,4 +1,7 @@
 <h1>Song Index</h1>
-iterate through songs array
-display artist name - song title
-<%= @artist.name %> - <%= @song.title %>
+
+<% @artists.each do |a| %>
+  <%= a.songs.each do |s| %>
+    <p><%= s.artist_name %> - <%= link_to s.title, song_path(s) %></p>
+  <% end %>
+<% end %>
