@@ -14,7 +14,7 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.new(artist_params) #instatiate a new artist
-  
+
     if @artist.save
       redirect_to artist_path(@artist)
     else
