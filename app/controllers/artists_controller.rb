@@ -1,8 +1,11 @@
 class ArtistsController < ApplicationController
   def index
+    @artists = Artist.all
   end
 
   def show
+    # binding.pry
+    @artist = Artist.find(params[:id])
   end
 
   def new
@@ -33,6 +36,9 @@ class ArtistsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def song_count
   end
 
   def destroy
