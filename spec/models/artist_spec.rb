@@ -13,3 +13,4 @@ RSpec.describe Artist, type: :model do
     expect(@artist.song_count).to eq(2)
   end
 end
+   
